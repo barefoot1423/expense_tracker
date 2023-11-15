@@ -14,6 +14,7 @@ class _NewExpenseState extends State<NewExpense> {
 
   @override
   void dispose() {
+
     _titleController.dispose();
     super.dispose();
   }
