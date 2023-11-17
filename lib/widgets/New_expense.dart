@@ -52,8 +52,6 @@ class _NewExpenseState extends State<NewExpense> {
               label: Text('Title'),
             ),
           ),
-
-
           Row(
             children: [
               Expanded(
