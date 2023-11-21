@@ -35,7 +35,6 @@ class _NewExpenseState extends State<NewExpense> {
   }
 
   void _submitExpenseDate() {
-    print('in function');
     final enteredAmount = double.tryParse(_amountController.text);
     final amountIsValid = enteredAmount == null || enteredAmount <= 0;
     if (_titleController.text.toString().isEmpty ||
@@ -57,6 +56,7 @@ class _NewExpenseState extends State<NewExpense> {
           ],
         ),
       );
+      return;
     }
   }
 
@@ -140,9 +140,7 @@ class _NewExpenseState extends State<NewExpense> {
                 child: const Text('Cancel'),
               ),
               ElevatedButton(
-                onPressed: () {
-                  _submitExpenseDate;
-                },
+                onPressed: _submitExpenseDate,
                 child: const Text('Save Expense'),
               ),
             ],
