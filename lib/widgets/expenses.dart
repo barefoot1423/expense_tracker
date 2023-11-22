@@ -35,6 +35,10 @@ class _ExpensesState extends State<Expenses> {
     );
   }
 
+  void _addExpense(Expense expense) {
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
