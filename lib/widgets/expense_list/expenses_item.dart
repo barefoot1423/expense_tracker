@@ -15,10 +15,15 @@ class ExpenseItem extends StatelessWidget {
           vertical: 16,
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(expense.title),
+            Text(
+              expense.title,
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
             const SizedBox(
               height: 4,
+
             ),
             Row(
               children: [
@@ -27,9 +32,7 @@ class ExpenseItem extends StatelessWidget {
                 Row(
                   children: [
                     Icon(categoryIcons[expense.category]),
-                    const SizedBox(
-                      width: 8,
-                    ),
+                    const SizedBox(width: 8),
                     Text(expense.formattedDate),
                   ],
                 ),
